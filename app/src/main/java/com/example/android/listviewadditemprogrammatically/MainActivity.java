@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     //instantiate class utk akses ke property
     List<MyProperty> property = new ArrayList<MyProperty>();
 
+    //initial adapter
     ArrayAdapter<MyProperty> adapter=null;
 
     ListView listView;
@@ -36,11 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
         editText=(EditText)findViewById(R.id.editText1);
 
+        //menghubungkan adapter pada class yg berisi property
         adapter=new ArrayAdapter<MyProperty>(getBaseContext(),R.layout.support_simple_spinner_dropdown_item,property);
 
+        //set data source utk listview
         listView.setAdapter(adapter);
 
 
+        //saat button di click akan otomatis menambahkan item data ke listview
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
