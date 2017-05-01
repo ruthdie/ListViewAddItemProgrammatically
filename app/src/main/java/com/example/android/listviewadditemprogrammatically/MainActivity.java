@@ -13,6 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    //instantiate class utk akses ke property
     List<MyProperty> property = new ArrayList<MyProperty>();
 
     ArrayAdapter<MyProperty> adapter=null;
